@@ -1,34 +1,66 @@
 /* Global elements */
-@media (min-width: 500px) {
-.navbar-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-}
+
 body {
   font-size: 15px;
   font-style: Verdana, Geneva, sans-serif;
 
 }
-.logo{
-  margin-top:25px;
-  margin-bottom: 25px;
+img.logo {
+  height: 50px;
+  width: auto;
 }
-/*header*/
+/*navigation bar*/
 header {
   font-size: 18px;
 }
-#navbarCollapse ul li {
+.header div {
   display: inline-block;
-  margin: 0 20px;
 }
-#navbarCollapse ul li:hover, #navbarCollapse ul a:hover, #navbarCollapse ul a:focus, #navbarCollapse ul a:active #navbarCollapse ul li{
-  font-weight: bold;
-  background-color: black;
-  color: white;
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.dropdown .dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition:         all 0.5s  ease;
+  -moz-transition:    all 0.5s  ease;
+  -webkit-transition: all 0.5s  ease;
+  -o-transition:      all 0.5s  ease;
+  -ms-transition:     all 0.5s  ease;
+}
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  max-height: auto;
+}
+.dropdown {
+  display: inline-block;
+}
+/*main
+----------
+imgae slideshow*/
+main {
+  margin-top: 90px;
+}
+.carousel {
+  width: 80%;
+  margin: auto;
+}
+.carousel-inner {
+  margin: auto;
+}
+.carousel-inner .item img {
+  margin: auto;
+  height: 300px;
 }
 
 /*footer*/
 footer {
-  font-size: 20px;
+  font-size: 13px;
+  text-align: center;
 }

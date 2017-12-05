@@ -10,7 +10,10 @@ body {
   font-style: Verdana, Geneva, sans-serif;
 
 }
-
+.logo{
+  margin-top:25px;
+  margin-bottom: 25px;
+}
 /*header*/
 header {
   font-size: 18px;

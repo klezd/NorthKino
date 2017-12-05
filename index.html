@@ -9,14 +9,55 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--self modified-->
+    <link rel="stylesheet" href="css/navigatorbar.css">
+    <link rel="stylesheet" href="css/index.css">
+
 
   </head>
   <body>
     <header>
-
+      <div class="container">
+        <div class="logo">
+          <img src="" alt="NorthKino">
+        </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav nav">
+              <li class="nav-item active">
+                <a class="nav-link"  href="index.html"> Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle nav-link" data-toggle="dropdown" id="movies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                  Movies
+                </a>
+                <div class="dropdown-menu" aria-labelledby="#movies">
+                  <a class="dropdown-item" href="#">On Show</a>
+                  <a class="dropdown-item" href="#">Coming Soon</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a data-toggle="modal" data-target="#Sign-in" class="nav-link" title="Sign In">Sign In</a>
+              </li>
+            </ul>
+          </div> <!--#navbarCollapse-->
+        </nav>
+      </div> <!--.container-->
     </header>
     <main>
 

@@ -1,5 +1,29 @@
-/*header*/
+/* Global elements */
+@media (min-width: 500px) {
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+}
+body {
+  font-size: 15px;
+  font-style: Verdana, Geneva, sans-serif;
 
+}
+
+/*header*/
+header {
+  font-size: 18px;
+}
+#navbarCollapse ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+#navbarCollapse ul li:hover, #navbarCollapse ul a:hover, #navbarCollapse ul a:focus, #navbarCollapse ul a:active #navbarCollapse ul li{
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
 
 /*footer*/
 footer {

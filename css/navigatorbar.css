@@ -16,6 +16,7 @@ header {
 .header div {
   display: inline-block;
 }
+
 ul li {
   list-style-type: none;
   display: inline-block;
@@ -50,17 +51,31 @@ main {
 .carousel {
   width: 80%;
   margin: auto;
+
 }
 .carousel-inner {
   margin: auto;
 }
-.carousel-inner .item img {
-  margin: auto;
-  height: 300px;
+
+.carousel-item img{
+  margin-left: auto;
+  margin-right: auto;
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center
 }
+
+/*.carousel-inner .item img {
+  margin: auto;
+  width: 700px;
+  height: 320px;
+}*/
 
 /*footer*/
 footer {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
+  background-color:#C4EDDE;
+
+
 }

@@ -10,18 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
     <!-- fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- tweenmax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <!--self modified-->
+    <script type="text/javascript" href="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
     <link rel="stylesheet" href="css/index.css">
-    <script type="text/javascript" href="scripts/scripts.js"></script>
-
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top" style="background-color: #384259;">
-        <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" class="logo"></a
+        <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" class="logo"></a>
           <!-- Toggle icon when in mobile view -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -64,22 +61,96 @@
               <li class="nav-item">
                 <a class="nav-link" href="#" title="Contact Us">Contact Us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="modal" data-target="#sign-in">
-                  <span data-toggle="tootltip" data-placement="bottom" title="Sign In">
-                    Sign In
-                  </span>
+              <li class="nav-item" id="sign-inButton">
+                <a class="nav-link" data-toggle="tootltip" data-placement="bottom" title="Sign In">
+                  Sign In
                 </a>
               </li>
-
-
             </ul>
-
-              </div>
+          </div>
         </nav>
     </header>
+
+    <!-- sign in modal -->
+    <div class="modal" id="sign-in" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modalLable">
+            <h3 style="text-align: center;">SIGN IN</h3>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-6" style="border-right: 1px solid #B0BEC5">
+                <h3 style="text-align:center">ARE YOU MEMBER?</h3>
+                <div class="signinForm">
+                  <div class="inputLabel">
+                    Username / Email
+                  </div>
+                  <input type="text" class="inputfield" name="" value="" placeholder="Username/ Email">
+                  <div class="inputLabel">
+                    Password
+                  </div>
+                  <input type="password" class="inputfield" name="" value="" placeholder="Password">
+                  <input type="checkbox" name="showPassword" id="showPassword" value="showPassword"> Show password
+                  <a href="#" role="button" class="submitButton">Sign in</a>
+                  <a href="#" style="float:right; margin-top: 10px" id="forgotPass">Forgot password?</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <h5 style="text-align:center">Not a member yet!</h5>
+                <h3 style="text-align:center; margin-bottom: 50px;">WANT TO JOIN?</h3>
+                <a href="#" role="button" id="sign-upButton" class="submitButton">Register here!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div> <!-- end sign in modal-->
+    <!--SIGN UP MODAL-->
+    <div class="modal" id="sign-up" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modalLable">
+            <h3 style="text-align: center;">SIGN UP</h3>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <h3 style="text-align:center">REGISTER FOR A NEW ACCOUNT</h3>
+            <div class="signinForm">
+              <div class="inputLabel">
+                Username
+              </div>
+              <input type="text" class="inputfield" name="" value="" placeholder="Username" required>
+              <div class="inputLabel">
+                Email
+              </div>
+              <input type="email" class="inputfield" name="" value="" placeholder="Email">
+              <div class="inputLabel">
+                Password
+              </div>
+              <input type="password" class="inputfield" name="" value="" placeholder="Password" id="password">
+              <div class="inputLabel">
+                Repeat password
+              </div>
+              <input type="password" class="inputfield" name="" value="" placeholder="Repeat password">
+              <input type="checkbox" name="showPassword" id="showPassword" value="showPassword" onclick="showPass()"> Show password
+              <a href="#" role="button" class="submitButton">Sign up</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
     <main role="main">
-      <div class="container" style="background-color: #F73859;">
+      <div class="container">
         <!--image slideshow-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -117,10 +188,10 @@
       </div> <!--container-->
 
     </main>
-    <footer class="container">
+    <footer>
       <div class="row">
         <div class="col-sm-3">
-
+          <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" style="margin: 5px 25px 5px;"height="15px"></a>
         </div>
         <div class="col-sm-6">
           <i class="fa fa-copyright fa-lg" aria-hidden="true"></i> NorthKino - all right reserved
@@ -135,7 +206,46 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <!-- tweenmax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript">
+    //sign in
+      var signinButton = document.getElementById("sign-inButton");
+      var signinModal = document.getElementById("sign-in");
 
+      signinButton.onclick = function() {
+        signinModal.style.display = "block";
+      }
+
+
+      window.onclick = function(event) {
+        if ((event.target == signinModal)||(event.target == signupModal)){
+          signinModal.style.display = "none";
+          signupModal.style.display = "none";
+        }
+      }
+      //sign up
+      var signupButton = document.getElementById("sign-upButton");
+      var signupModal = document.getElementById("sign-up");
+      signupButton.onclick = function() {
+        signupModal.style.display = "block";
+        signinModal.style.display = "none";
+      }
+      //show password
+      function showPass() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+              x.type = "text";
+          } else {
+              x.type = "password";
+          }
+      }
+      //form
+      $(document).ready(function(){
+          $(".inputfield").focus(function(){
+              $(".inputLabel").fadeTo(1000,1).fadeIn(500).css("display", "block");
+          });
+      });
+    </script>
   </body>
 </html>

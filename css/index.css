@@ -1,0 +1,42 @@
+/*body*/
+main {
+  margin-top: 70px;
+  background-color: #F73859;
+}
+/*main
+----------
+imgae slideshow*/
+
+.carousel {
+  width: 80%;
+  margin: auto;
+}
+.carousel-inner {
+  margin: auto;
+}
+
+.carousel-item img{
+  margin-left: auto;
+  margin-right: auto;
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center
+}
+.carousel-indicators {
+  z-index: 5!important;
+}
+
+
+/*.carousel-inner .item img {
+  margin: auto;
+  width: 700px;
+  height: 320px;
+}*/
+
+/*footer*/
+footer {
+  font-size: 15px;
+  text-align: center;
+  background-color:#C4EDDE;
+
+}

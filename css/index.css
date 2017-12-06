@@ -1,14 +1,15 @@
 /*body*/
 main {
   margin-top: 70px;
-  background-color: #F73859;
+  background-color:#80CBC4;
+  padding-bottom: 20px;
 }
 /*main
 ----------
 imgae slideshow*/
 
 .carousel {
-  width: 80%;
+
   margin: auto;
 }
 .carousel-inner {
@@ -33,10 +34,65 @@ imgae slideshow*/
   height: 320px;
 }*/
 
+/*tab slideshow*/
+.tab.collection {
+  width: 100%;
+  display: inline-block;
+}
+  /*clear fix*/
+.tab-links::after {
+  display:block;
+  clear:both;
+  content:'';
+}
+.tab-links {
+  margin-bottom: 0;
+}
+
+.tab-links li {
+  float: left;
+  margin: 5px 5px 0 5px;
+
+}
+
+.tab-links a {
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px!important;
+  transition:all linear 0.15s;
+  color: white;
+  background: #00796B;
+  padding: 5px 15px;
+}
+.tab-links a:hover {
+  background:#009688;
+}
+
+.tab-links li.active a, .tab-links li.active a:hover {
+  background:#fff;
+  color:#4c4c4c;
+}
+.tab-content {
+  padding:15px;
+  border-radius:3px;
+  box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+  background:#fff;
+}
+
+.tab {
+  display: none;
+}
+
+.tab .active {
+  display: block;
+}
+
 /*footer*/
 footer {
   font-size: 15px;
   text-align: center;
   background-color:#C4EDDE;
+  margin-top: 4px;
 
 }

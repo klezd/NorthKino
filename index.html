@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>NorthKino</title>
+    <title>NorthKino - Home</title>
     <link rel="Shortcut Icon" href="logo/logo-icon.png" type="image/x-icon">
     <!--bootstrap-->
     <!--CSS -->
@@ -32,7 +32,7 @@
                 <a class="nav-link" href="index.html" title="Home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" title="Schedule">Schedule</a>
+                <a class="nav-link" href="schedule.html" title="Schedule">Schedule</a>
               </li>
               <!--<li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="movies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,18 +48,18 @@
                   Movies
                 </a>
                 <div class="dropdown-menu" id="dropdown-content">
-                    <a class="dropdown-item" href="#" title="On Show">On Show</a>
-                    <a class="dropdown-item" href="#" title="Coming Soon">Coming Soon</a>
+                    <a class="dropdown-item" href="movies.html#on-showing" title="On Show">On Show</a>
+                    <a class="dropdown-item" href="movies.html#coming-soon" title="Coming Soon">Coming Soon</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" title="Tickets">Tickets</a>
+                <a class="nav-link" href="tickets.html" title="Tickets">Tickets</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" title="Events">Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" title="Contact Us">Contact Us</a>
+                <a class="nav-link" href="contactus.html" title="Contact Us">Contact Us</a>
               </li>
               <li class="nav-item" id="sign-inButton">
                 <a class="nav-link" data-toggle="tootltip" data-placement="bottom" title="Sign In">
@@ -185,7 +185,28 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+
+        <!---
+        movies tabs slideshow
+      -->
+        <div class="tab-collection" id="tabSlideshow">
+          <ul class="tab-links">
+            <li class="active"><a href="#now-showing">Now Showing</a></li>
+            <li><a href="#coming-soon">Coming Soon</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab active" id="now-showing">
+                aqweeeeeeeeeeeeeeee
+            </div>
+            <div class="tab" id="coming-soon">
+              gthsadsad
+            </div>
+          </div>
+
+        </div> <!--tab-collection-->
       </div> <!--container-->
+
+
 
     </main>
     <footer>
@@ -209,7 +230,7 @@
     <!-- tweenmax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script type="text/javascript">
-    //sign in
+      //sign in
       var signinButton = document.getElementById("sign-inButton");
       var signinModal = document.getElementById("sign-in");
 
@@ -245,6 +266,26 @@
           $(".inputfield").focus(function(){
               $(".inputLabel").fadeTo(1000,1).fadeIn(500).css("display", "block");
           });
+      });
+
+      //show and hide tabSlideshow
+      $(document).ready(function(){
+        $(".tab-links a").on("click", function(e){
+          var currentTab = $(this).attr("href");
+          //show and hide tabs
+          $('.tab'+currentTab).show(600).siblings().hide(600);
+          //add active class
+          $(this).parent('li').addClass("active").siblings().removeClass("active");
+          //Prevent Default Anchor Link Behaviour
+          e.preventDefault();
+        });
+      });
+
+      $(document).ready(function(){
+          $(".dropdown-toggle").dropdown();
+      });
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
   </body>

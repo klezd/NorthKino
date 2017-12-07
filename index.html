@@ -21,7 +21,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top" style="background-color: #384259;">
-        <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" class="logo"></a
+        <a href="index.html" title="Home"><img src="logo/logo.png" alt="NorthKino" class="logo"></a
           <!-- Toggle icon when in mobile view -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -115,6 +115,35 @@
           </a>
         </div>
       </div> <!--container-->
+      <div class="container">
+        <div class="tab-wrap">
+
+          <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+          <label for="tab1">Now showing</label>
+
+          <input type="radio" id="tab2" name="tabGroup1" class="tab col-span 2">
+          <label for="tab2">Coming soon</label>
+
+          <input type="radio" id="" name="" style="display:none;">
+          <label for="tab3" class="static"></label>
+
+          <div class="tab-content">
+            <h3>Section One</h3>
+            <p>...</p>
+          </div>
+
+          <div class="tab-content">
+            <h3>Section Two</h3>
+            <p>...</p>
+          </div>
+<!--
+  <div class="tab-content">
+    <h3>Section Three</h3>
+    <p>...</p>
+  </div>
+-->
+        </div>
+      </div>
 
     </main>
     <footer class="container">

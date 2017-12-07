@@ -5,12 +5,14 @@ body {
   font-style: Verdana, Geneva, sans-serif;
 }
 /*footer*/
+
 footer {
   font-size: 15px;
   text-align: center;
   background-color:#C4EDDE;
   margin-top: 4px;
 }
+
 main {
   margin-top: 70px;
   background-color:#80CBC4;

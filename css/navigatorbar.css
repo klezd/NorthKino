@@ -3,7 +3,19 @@
 body {
   font-size: 15px;
   font-style: Verdana, Geneva, sans-serif;
-
+}
+/*footer*/
+footer {
+  font-size: 15px;
+  text-align: center;
+  background-color:#C4EDDE;
+  margin-top: 4px;
+}
+main {
+  margin-top: 70px;
+  background-color:#80CBC4;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 a {
   text-decoration: none;
@@ -18,6 +30,7 @@ img.logo {
   height: 50px;
   width: auto;
 }
+
 /*navigation bar*/
 header {
   font-size: 18px;

@@ -1,0 +1,39 @@
+/*select city */
+.choose_city {
+  margin: 10px;
+  padding: 10px;
+}
+label {
+  font-size: 20px;
+}
+select {
+  margin-left: 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 3px 20px;
+  font-size: 18px;
+  box-shadow: 1px 1px 1px #9E9E9E;
+}
+select:focus {
+
+  outline:  #EEEEEE 1px solid;
+  border-radius: 5px;
+}
+option {
+  outline: 1px #9E9E9E;
+}
+option:hover {
+  background: #039BE5;
+}
+/*ticket price field */
+.ticket-pricelist {
+  width: 100%;
+  display: inline-block;
+}
+.ticket-tab {
+  display: none;
+}
+.ticket-tab .active {
+  display: block;
+}

@@ -1,3 +1,12 @@
+/*body*/
+main {
+  margin-top: 70px;
+  background-color:#80CBC4;
+  padding-bottom: 20px;
+}
+/*main
+----------
+imgae slideshow*/
 .tab-wrap {
   -webkit-transition: 0.3s box-shadow ease;
   transition: 0.3s box-shadow ease;
@@ -18,6 +27,88 @@
   margin-left: auto;*/
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
+.carousel {
+
+  margin: auto;
+}
+.carousel-inner {
+  margin: auto;
+}
+
+.carousel-item img{
+  margin-left: auto;
+  margin-right: auto;
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center
+}
+.carousel-indicators {
+  z-index: 5!important;
+}
+
+
+/*.carousel-inner .item img {
+  margin: auto;
+  width: 700px;
+  height: 320px;
+}*/
+
+/*tab slideshow*/
+.tab.collection {
+  width: 100%;
+  display: inline-block;
+}
+  /*clear fix*/
+.tab-links::after {
+  display:block;
+  clear:both;
+  content:'';
+}
+.tab-links {
+  margin-bottom: 0;
+}
+
+.tab-links li {
+  float: left;
+  margin: 5px 5px 0 5px;
+
+}
+
+.tab-links a {
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px!important;
+  transition:all linear 0.15s;
+  color: white;
+  background: #00796B;
+  padding: 5px 15px;
+}
+.tab-links a:hover {
+  background:#009688;
+}
+
+.tab-links li.active a, .tab-links li.active a:hover {
+  background:#fff;
+  color:#4c4c4c;
+}
+.tab-content {
+  padding:15px;
+  border-radius:3px;
+  box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+  background:#fff;
+}
+
+.tab {
+  display: none;
+}
+
+.tab .active {
+  display: block;
+}
+
+/*footer*/
 
 .tab-wrap:hover { box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19); }
 

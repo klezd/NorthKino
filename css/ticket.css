@@ -16,7 +16,6 @@ select {
   box-shadow: 1px 1px 1px #9E9E9E;
 }
 select:focus {
-
   outline:  #EEEEEE 1px solid;
   border-radius: 5px;
 }
@@ -28,12 +27,41 @@ option:hover {
 }
 /*ticket price field */
 .ticket-pricelist {
-  width: 100%;
-  display: inline-block;
+  width: 80%;
+  display: block;
+  margin-top: 10px;
+  margin: auto;
 }
 .ticket-tab {
   display: none;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
 }
-.ticket-tab .active {
+.active {
   display: block;
+}
+.ticket_tab_item {
+  padding: 5px;
+  margin: auto;
+  animation-name: show;
+  animation-duration: 10s;
+  animation-timing-function: ease-in;
+  -moz-animation-name: show;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-in;
+}
+.ticket_tab_item img {
+  width: 640px;
+  height: 360px;
+
+}
+/* animation for pricelist*/
+@keyframes show {
+  from {top:-100px}
+  to {top:0}
+}
+@-moz-keyframes show {
+  from {top:-100px}
+  to {top:0}
 }

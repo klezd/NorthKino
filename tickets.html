@@ -156,7 +156,7 @@
         <h1>TICKETS</h1>
         <div class="row choose_city">
           <label data-toggle="tooltip" data-placement="bottom" title="Choose city to see price list for tickets"> Choose city:</label>
-          <select class="city-choice" name="city-choice" id="city-choice">
+          <select class="city-choice" name="city-choice" id="city-choice" onchange="showPriceList()">
             <option value="Helsinki">Helsinki</option>
             <option value="Oulu">Oulu</option>
             <option value="Turku">Turku</option>
@@ -164,25 +164,35 @@
             <option value="Rovaniemi">Rovaniemi</option>
           </select>
         </div>
+        <div class="ticket-pricelist">
+          <div class="ticket-tab active" id="Helsinki">
+            <div class="ticket_tab_item">
+              <img src="ticket_price/Helsinki.jpg" alt="Helsinki's NorthKino cinema pricelist">
+            </div>
+          </div>
+          <div class="ticket-tab" id="Oulu">
+            <div class="ticket_tab_item">
+              <img src="ticket_price/Oulu.jpg" alt="Oulu's NorthKino cinema pricelist">
+            </div>
+          </div>
+          <div class="ticket-tab" id="Turku">
+            <div class="ticket_tab_item">
+              <img src="ticket_price/Turku.jpg" alt="Turku's NorthKino cinema pricelist">
+            </div>
+          </div>
+          <div class="ticket-tab" id="Tampere">
+            <div class="ticket_tab_item">
+              <img src="ticket_price/Tampere.jpg" alt="Tampere's NorthKino cinema pricelist">
+            </div>
+          </div>
+          <div class="ticket-tab" id="Rovaniemi">
+            <div class="ticket_tab_item">
+              <img src="ticket_price/Rovaniemi.jpg" alt="Rovaniemi's NorthKino cinema pricelist">
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="ticket-pricelist">
-        <div class="ticket-tab active" id="Helsinki">
 
-        </div>
-        <div class="ticket-tab" id="Oulu">
-          
-        </div>
-        <div class="ticket-tab" id="Turku">
-
-        </div>
-        <div class="ticket-tab" id="Tampere">
-
-        </div>
-        <div class="ticket-tab" id="Rovaniemi">
-
-        </div>
-
-      </div>
     </main>
 
     <footer>
@@ -213,7 +223,6 @@
       signinButton.onclick = function() {
         signinModal.style.display = "block";
       }
-
 
       window.onclick = function(event) {
         if ((event.target == signinModal)||(event.target == signupModal)){
@@ -256,6 +265,18 @@
           e.preventDefault();
         });
       });
+
+      //display ticket pricelist item
+      function showPriceList() {
+        var city_to_show = document.getElementById('city-choice').value;
+        var currentCity = $('.ticket-pricelist').find(".active").attr("id"); // return the id of the city that is currently showing the priclist table
+        //console.log(city_to_show); console.log(currentCity);
+        // delete class active from current city
+        $("#"+currentCity).hide(600).removeClass('active');
+        //currentCity = city_to_show;
+        //add class to the city_to_show
+        $("#"+city_to_show).show(600).addClass('active');
+      }
     </script>
   </body>
 </html>

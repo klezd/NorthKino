@@ -12,6 +12,14 @@ footer {
   background-color:#3DC7BE;
   /*margin-top: 4px;*/
 }
+/*main*/
+main {
+  background-color:#80CBC4 !important;
+  padding-bottom: 20px;
+  /*background-color:#364857;*/
+  padding-top: 70px;
+}
+/*nav bar*/
 
 a {
   text-decoration: none;

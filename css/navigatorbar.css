@@ -9,16 +9,10 @@ body {
 footer {
   font-size: 15px;
   text-align: center;
-  background-color:#C4EDDE;
-  margin-top: 4px;
+  background-color:#3DC7BE;
+  /*margin-top: 4px;*/
 }
 
-main {
-  margin-top: 70px;
-  background-color:#80CBC4;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
 a {
   text-decoration: none;
 }
@@ -50,6 +44,16 @@ ul li {
 li:hover {
   cursor: pointer;
 }
+
+.navbar{
+  margin : 0px;
+}
+
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+
 .dropdown .dropdown-menu {
   display: block;
   visibility: hidden;

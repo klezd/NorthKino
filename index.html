@@ -8,8 +8,10 @@
     <!--CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!--self modified-->
     <script type="text/javascript" href="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
@@ -17,7 +19,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top" style="background-color: #384259;">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top" style="background-color: #334252;">
         <a href="index.html" title="Home"><img src="logo/logo.png" alt="NorthKino" class="logo"></a
           <!-- Toggle icon when in mobile view -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -186,26 +188,105 @@
           </a>
         </div>
 
-        <!---
-        movies tabs slideshow
-      -->
+        <!--- movies tabs slideshow -->
         <div class="tab-collection" id="tabSlideshow">
-          <div class="tab-links-wrap">
+        <div class="tab-links-wrap">
             <ul class="tab-links">
               <li class="active"><a href="#now-showing">Now Showing</a></li>
               <li><a href="#coming-soon">Coming Soon</a></li>
             </ul>
-          </div>
-          <div class="tab-content">
-            <div class="tab active" id="now-showing">
-                aqweeeeeeeeeeeeeeee
+        </div>
+        <div class="tab-content">
+          <div class="tab active" id="now-showing">
+            <div class='row'>
+              <div class='col-md-12'>
+                <div class="carousel slide media-carousel" id="media">
+                  <div class="carousel-inner">
+                    <div class="item  active">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/Captain-America.jpg"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/drive-angry.jpg"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/finding-nemo.jpg"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/grey-movie.jpg"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/avatar.jpg"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/bachelor-party.jpg"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/blue-collar-comedy-tour.jpg"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="film/bridesmaids-poster.jpg"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                </div>
+              </div>
             </div>
-            <div class="tab" id="coming-soon">
-              gthsadsad
+		      </div>
+          <div class="tab" id="coming-soon">
+            <div class='row'>
+              <div class='col-md-12'>
+                <div class="carousel slide media-carousel" id="media">
+                  <div class="carousel-inner">
+                    <div class="item  active">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                </div>
+              </div>
             </div>
           </div>
-
-        </div> <!--tab-collection-->
+        </div>
+      </div> <!--tab-collection-->
       </div> <!--container-->
 
     </main>
@@ -227,6 +308,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <!-- tweenmax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script type="text/javascript">
@@ -281,12 +363,21 @@
         });
       });
 
+      //tabSlideshow
+      $(document).ready(function() {
+        $('#media').carousel({
+            pause: true,
+            interval: false,
+        });
+
       $(document).ready(function(){
           $(".dropdown-toggle").dropdown();
       });
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
       });
+
+});
     </script>
   </body>
 </html>

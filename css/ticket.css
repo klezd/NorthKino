@@ -45,10 +45,11 @@ option:hover {
   padding: 5px;
   margin: auto;
   animation-name: show;
-  animation-duration: 10s;
+  animation-duration: 0.5s;
+  position: relative;
   animation-timing-function: ease-in;
   -moz-animation-name: show;
-  -moz-animation-duration: 1s;
+  -moz-animation-duration: 0.5s;
   -moz-animation-timing-function: ease-in;
 }
 .ticket_tab_item img {

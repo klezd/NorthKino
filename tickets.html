@@ -272,10 +272,10 @@
         var currentCity = $('.ticket-pricelist').find(".active").attr("id"); // return the id of the city that is currently showing the priclist table
         //console.log(city_to_show); console.log(currentCity);
         // delete class active from current city
-        $("#"+currentCity).hide(600).removeClass('active');
+        $("#"+currentCity).fadeOut(100).removeClass('active');
         //currentCity = city_to_show;
         //add class to the city_to_show
-        $("#"+city_to_show).show(600).addClass('active');
+        $("#"+city_to_show).fadeIn(600).addClass('active');
       }
     </script>
   </body>

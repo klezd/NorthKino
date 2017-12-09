@@ -8,11 +8,13 @@
     <!--CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--self modified-->
     <script type="text/javascript" href="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
+    <link rel="stylesheet" href="css/movie.css">
 
   </head>
   <body>
@@ -151,30 +153,153 @@
       </div>
     </div>
 
-    <main>
+    <main style="background-color:#80CBC4; padding:20px 0;">
       <!--- movies tabs slideshow -->
     <div class="container">
-        <div class="tab-wrap">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#on-showing">NOW SHOWING</a></li>
+        <li><a data-toggle="tab" href="#coming-soon">COMING SOON</a></li>
+      </ul>
+      <div class="tab-content">
+          <div id="on-showing" class="tab-pane fade in active">
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/Captain-America.jpg">
+            <img src="film/Captain-America.jpg" alt="Captain America" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
 
-        <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-        <label for="tab1">Now showing</label>
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/drive=angry.jpg">
+            <img src="film/drive-angry.jpg" alt="Drive Angry" width="280px" height="500px">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
 
-        <input type="radio" id="tab2" name="tabGroup1" class="tab col-span 2">
-        <label for="tab2">Coming soon</label>
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/finding-nemo.jpg">
+            <img src="film/finding-nemo.jpg" alt="Finding Nemo" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
 
-        <input type="radio" id="" name="" style="display:none;">
-        <label for="tab3" class="static"></label>
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/grey-movie.jpg">
+            <img src="film/grey-movie.jpg" alt="Grey Movie" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
 
-        <div class="tab-content">
-          <h3>Section One</h3>
-          <p>...</p>
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/avatar.jpg">
+            <img src="film/avatar.jpg" alt="Avatar" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/bachelor-party.jpg">
+            <img src="film/bachelor-party.jpg" alt="Bachelor Party" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/blue-collar-comedy-tour.jpg">
+            <img src="film/blue-collar-comedy-tour.jpg" alt="Blue Collar Comedy Tour" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/bridesmaids=poster.jpg">
+            <img src="film/bridesmaids-poster.jpg" alt="Brides Maids" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+          </div>
+          <div id="coming-soon" class="tab-pane fade">
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/Captain-America.jpg">
+            <img src="film/hall-pass.jpg" alt="Captain America" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/drive=angry.jpg">
+            <img src="film/howtolosefriendsandalienatepeople.jpg" alt="Drive Angry" width="280px" height="500px">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/finding-nemo.jpg">
+            <img src="film/me-before-you.jpg" alt="Finding Nemo" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/grey-movie.jpg">
+            <img src="film/she-s-out-of-my-league.jpg" alt="Grey Movie" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/avatar.jpg">
+            <img src="film/twilight.jpg" alt="Avatar" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/bachelor-party.jpg">
+            <img src="film/the-box.jpg" alt="Bachelor Party" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+            <div class="responsive">
+            <div class="gallery">
+            <a target="_blank" href="film/blue-collar-comedy-tour.jpg">
+            <img src="film/the-contractor.jpg" alt="Blue Collar Comedy Tour" width="300" height="700">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+            </div>
+            </div>
+
+          </div>
         </div>
-
-        <div class="tab-content">
-          <h3>Section Two</h3>
-          <p>...</p>
-        </div>
-      </div>
     </div>
     </main>
 
@@ -238,7 +363,7 @@
       });
 
       //show and hide tabSlideshow
-      $(document).ready(function(){
+      /*$(document).ready(function(){
         $(".tab-links a").on("click", function(e){
           var currentTab = $(this).attr("href");
           //show and hide tabs
@@ -248,7 +373,7 @@
           //Prevent Default Anchor Link Behaviour
           e.preventDefault();
         });
-      });
+      });*/
 
       $(document).ready(function(){
           $(".dropdown-toggle").dropdown();

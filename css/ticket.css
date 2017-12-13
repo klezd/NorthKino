@@ -59,10 +59,10 @@ option:hover {
 }
 /* animation for pricelist*/
 @keyframes show {
-  from {top:-100px}
-  to {top:0}
+  from {top:-30px; opacity: 0}
+  to {top:0; opacity: 1}
 }
 @-moz-keyframes show {
-  from {top:-100px}
-  to {top:0}
+  from {top:-30px; opacity: 0}
+  to {top:0; opacity: 1}
 }

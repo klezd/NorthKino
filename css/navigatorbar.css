@@ -1,5 +1,22 @@
 /* Global elements */
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+img,
+section,
+summary {
+    display: block;
+}
+
+
 body {
   font-size: 15px;
   font-family: Verdana, Geneva, sans-serif!important;
@@ -14,9 +31,8 @@ footer {
 }
 /*main*/
 main {
-  background-color:#80CBC4 !important;
+  background-color:#364857 !important;
   padding-bottom: 20px;
-  /*background-color:#364857;*/
   padding-top: 70px;
 }
 /*nav bar*/

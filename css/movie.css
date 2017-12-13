@@ -1,9 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 div.gallery {
-    border: 1px solid #ccc;
+    border: 1px solid #364857;
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid #364857;
 }
 
 div.gallery a{
@@ -11,10 +15,12 @@ div.gallery a{
   overflow: hidden;
   position: relative;
 }
+
 div.gallery img {
     width: 100%;
     height: 400px;
     -webkit-transition: all 1s;
+    -moz-transition : all 1s;
     transition: all 1s;
 }
 
@@ -23,12 +29,13 @@ div.gallery a:hover img {
 }
 
 div.desc {
+    color: white;
+    font-family : 'Basic';
+    font-size: 20px;
+    text-transform: uppercase;
+    height: 120px;
     padding: 15px;
     text-align: center;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .responsive {

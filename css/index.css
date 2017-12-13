@@ -5,7 +5,6 @@
 imgae slideshow*/
 
 .carousel {
-
   margin: auto;
 }
 .carousel-inner {
@@ -30,7 +29,14 @@ imgae slideshow*/
 .carousel .carousel-conrol.right{
   background-image: none!important;
 }
-
+#myCarousel .carousel-control.left
+{
+  left: 80px;
+}
+#myCarousel .carousel-control.right
+{
+  right: 80px;
+}
 /*.carousel-inner .item img {
   margin: auto;
   width: 700px;
@@ -54,7 +60,7 @@ imgae slideshow*/
   border-radius: 24px;
   height: 40px;
   width : 40px;
-  margin-top: 113px;
+  margin-top: 130px;
 }
 /* Next button  */
 .media-carousel .carousel-control.right
@@ -66,7 +72,7 @@ imgae slideshow*/
   border-radius: 24px;
   height: 40px;
   width : 40px;
-  margin-top: 113px;
+  margin-top: 130px;
 }
 /* Changes the position of the indicators */
 .media-carousel .carousel-indicators
@@ -85,10 +91,49 @@ imgae slideshow*/
 {
   background: #333333;
 }
-.media-carousel img
-{
-  width: 250px;
-  height: 300px
+/*#media #media2*/
+.img-gallery {
+  height: 320px;
+}
+.img-gallery img {
+  transition: 1s all;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  display: block;
+  overflow: hidden;
+  border-radius: 3px;
+  width: 210px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.img-gallery a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 210px;
+  max-width: 210px;
+  height: 300px;
+  display: inline-block;
+  position: relative;
+  padding: 0px;
+  margin: auto;
+  border: none;
+  box-shadow:  3px 3px 3px #9E9E9E;
+  border-radius: 3px;
+
+}
+.img-container:hover img {
+  -webkit-transform: scale(1.1);
+  -webkit-transform-duration: 2s;
+  -moz-transform: scale(1.1);
+  -moz-transform-duration: 2s;
+  transform: scale(1.1);
+  transform-duration: 2s;
 }
 /* End carousel */
 
@@ -175,5 +220,6 @@ imgae slideshow*/
 .tab .active {
   display: block;
 }
+
 
 /*footer*/

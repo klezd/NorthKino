@@ -24,7 +24,7 @@ body {
 /*footer*/
 
 footer {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   background-color:#90A4AE;
   color: #ffe6e6;
@@ -36,12 +36,6 @@ footer img {
   height: 24px!important;
   margin: 3px 25px 3px!important;
 }
-
-.no-padding> [class*="col-"]{
-  padding-left:0!important;
-  padding-right:0!important;
-}
-
 /*main*/
 main {
   background-color:#2C2E3E !important;

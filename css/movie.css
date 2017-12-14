@@ -62,3 +62,7 @@ div.desc {
     display: table;
     clear: both;
 }
+
+.tabs-slide a, .gallery a  {
+  color: white;
+}

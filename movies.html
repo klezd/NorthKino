@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>NorthKino</title>
+    <title>NorthKino - Movies</title>
     <link rel="Shortcut Icon" href="logo/logo-icon.png" type="image/x-icon">
     <!--bootstrap-->
     <!--JS jquery -->
@@ -21,14 +21,6 @@
     <script type="text/javascript" src="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
     <link rel="stylesheet" href="css/movie.css">
-    <script type="text/javascript">
-      // Javascript to enable link to tab
-      var url = document.location.toString();
-      if (url.match('#')) {
-      $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
-      }
-
-    </script>
   </head>
   <body>
     <header>
@@ -169,7 +161,7 @@
     <main>
       <!--- movies tabs slideshow -->
     <div class="container">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs tabs-slide">
         <li class="active"><a data-toggle="tab" href="#on-showing">NOW SHOWING</a></li>
         <li><a data-toggle="tab" href="#coming-soon">COMING SOON</a></li>
       </ul>
@@ -180,7 +172,7 @@
                 <a target="_blank" href="film/Captain-America.jpg">
                   <img src="film/Captain-America.jpg" alt="Captain America" width="300" height="700">
                 </a>
-                <div class="desc">Captain America</div>
+                <div class="desc"><a href="movies-info-nowshowing.html">Captain America</a></div>
               </div>
             </div>
 
@@ -254,7 +246,7 @@
                 <a target="_blank" href="film/hall-pass.jpg">
                   <img src="film/hall-pass.jpg" alt="Hall Pass" width="300" height="700">
                 </a>
-                <div class="desc">How Pass</div>
+                <div class="desc"><a href="movies-info-comingsoon.html">Hall Pass</a></div>
               </div>
             </div>
 

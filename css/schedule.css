@@ -1,0 +1,157 @@
+.inner{
+  max-width: 800px;
+}
+.general-block{
+  overflow: hidden;
+  background: url('https://www.galaxycine.vn/asset/default/images/line-hor.png') repeat-x 0 100%;
+  padding: 0 0 29px;
+}
+
+.general-block:last-child{
+  background: none
+}
+
+.block-wrap{
+    overflow: hidden;
+}
+
+.name-block{
+  position:relative;
+  background:#f8f8f8;
+  -moz-box-shadow:1px 2px 5px rgba(0,0,0,0.8);
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,0.8);
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.8);
+  /*color: #680f10;*/
+}
+
+.block-title {
+  border:1px solid #f8f8f8;
+  border-bottom:0;
+  font-size: 1.5rem;
+  text-transform:uppercase;
+  color:#3F7B70;
+  line-height: 3rem;
+  height: 3rem;
+  padding-left:50px;
+  font-weight: normal;
+}
+
+.movie-icon{
+  background:#dddddd url(../icon/player.png) 10px center  no-repeat;
+}
+
+.theater-icon{
+  background:#dddddd url(../icon/placeholder.png) 10px center no-repeat;
+}
+
+.time-icon{
+ background:#dddddd url(../icon/calendar-check.png) 10px center no-repeat;
+}
+
+.arrow-right {
+  padding-right:16px;
+  width:380px;
+  padding-bottom:10px;
+  position: relative;
+  float: left;
+}
+
+.arrow-right:before{
+  content: "";
+  position: absolute;
+  background: url(../icon/arrowhead-right.png) right 0 no-repeat;
+  width: 16px;
+  height: 26px;
+  right: 1px;
+  top: 3rem;
+  z-index: 10;
+}
+
+.arrow-bottom {
+  padding-bottom:16px;
+  margin: 0 4px 1rem 0;
+  position: relative;
+}
+
+.arrow-bottom:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 16px;
+  right: 1rem;
+  bottom: 1px;
+  z-index: 10;
+  background: url(../icon/arrowhead-down.png) 0 bottom no-repeat;
+}
+
+.movie-time{
+  /*margin: 0 4px 1rem 0;*/
+  float: right;
+  width: 400px;
+  position: relative;
+}
+
+.block-content {
+  padding:15px 30px;
+  max-width: 500px;
+}
+
+.block-content>.block-item {
+  cursor:pointer;
+  margin-bottom:10px;
+  padding: 0px 0 0px 50px;
+  min-height: 44px;
+  background: url(../icon//unchecked.png) left 0/25px 25px no-repeat;
+  color: #113C4A;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.block-content > .block-item .info {position: static;}
+
+.block-content>.block-item.checked {
+  color:#3F7B70;
+  font-weight:700;
+  background-image: url(../icon/checked.png);
+}
+
+.block-content>.block-item.checked.readonly {
+  color:silver;
+  font-weight:400;
+  cursor:default;
+}
+.schedule{
+  max-height: 45px;
+}
+
+.schedule-title {
+  font-weight:700;
+  font-size: 0.9em;
+}
+
+.schedule-items {
+  padding-left : 0px;
+  overflow: hidden;
+}
+
+.schedule-items a {
+  color:#113C4A;
+  font-size: 1em;
+}
+
+.schedule-items li {
+  display:inline-block;
+  float:left;
+  vertical-align:middle;
+  border-right: 1px solid #113C4A;
+  padding: 0 10px;
+  margin: 3px 0;
+}
+
+.schedule-items li:last-child{
+  border : none;
+}
+
+.block-content .block-item:hover,.schedule-items a:hover {
+  color:#38817A;
+}

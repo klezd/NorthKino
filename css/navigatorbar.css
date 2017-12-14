@@ -16,6 +16,9 @@ summary {
     display: block;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 body {
   font-size: 15px;

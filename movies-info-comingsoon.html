@@ -13,7 +13,6 @@
     <!--self modified-->
     <script type="text/javascript" href="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
-    <link rel="stylesheet" href="css/seatbooking.css">
 
   </head>
   <body>
@@ -72,6 +71,7 @@
         </nav>
 
     </header>
+
     <!-- sign in modal -->
     <div class="modal" id="sign-in" role="dialog">
       <div class="modal-content">
@@ -152,25 +152,7 @@
     </div>
 
     <main>
-      <a class="btnToAccess" id="seatbooking-btn" href="#">Click here to choose seat</a>
-      <div class="modal" id="seatbooking-modal" role="dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="modalLable">
-              <h3 style="text-align: center;">BOOK YOUR SEAT</h3>
-            </div>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-
-            </div>
-          </div>
-          <div class="modal-footer">
-
-          </div>
-        </div>
-      </div> <!-- end sign in modal-->
-
+      <h1 style="text-align: center"></h1>
     </main>
 
     <footer>
@@ -204,10 +186,9 @@
 
 
       window.onclick = function(event) {
-        if ((event.target == signinModal)||(event.target == signupModal)||(event.target == seatbookingModal)){
+        if ((event.target == signinModal)||(event.target == signupModal)){
           signinModal.style.display = "none";
           signupModal.style.display = "none";
-          seatbookingModal.style.display = "none";
         }
       }
       //sign up
@@ -245,12 +226,6 @@
           e.preventDefault();
         });
       });
-      // seatbookingModal
-      var seatbookingBtn = document.getElementById("seatbooking-btn")
-      var seatbookingModal = document.getElementById("seatbooking-modal")
-      seatbookingBtn.onclick = function() {
-        seatbookingModal.style.display = "block";
-      }
 
       $(document).ready(function(){
           $(".dropdown-toggle").dropdown();

@@ -14,7 +14,7 @@
     <script type="text/javascript" href="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
     <link rel="stylesheet" href="css/seatbooking.css">
-
+    <link rel="stylesheet" href="css/movie-info.css">
   </head>
   <body>
     <header>
@@ -29,7 +29,7 @@
             <ul class="navbar-nav ml-auto">
               <!-- ////Dropdown menu  !!! make it  obvious that it's a dropdown
               -->
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="index.html" title="Home">Home</a>
               </li>
               <li class="nav-item">
@@ -44,7 +44,7 @@
                     <a class="dropdown-item" href="#" title="Coming Soon">Coming Soon</a>
                 </div>
               </li> -->
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="movies" data-toggle="dropdown">
                   Movies
                 </a>
@@ -72,6 +72,7 @@
         </nav>
 
     </header>
+
     <!-- sign in modal -->
     <div class="modal" id="sign-in" role="dialog">
       <div class="modal-content">
@@ -152,17 +153,58 @@
     </div>
 
     <main>
-      <a class="btnToAccess" id="seatbooking-btn" href="#">Click here to choose seat</a>
-      <div class="modal" id="seatbooking-modal" role="dialog">
+      <div class="container" >
+        <h3>MOVIE INFORMATION</h3>
+
+        <div class=" movie-info-main">
+          <div class="row" >
+            <div class="col-md-6">
+              <div class="movie-poster">
+                <img src="film/Captain-America.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="col-md-6 movie-content">
+
+              <div class="description">
+                <h2>Captain America - The Winter Soldier</h2>
+                <p>
+                   As Steve Rogers struggles to embrace his role in the modern
+                   world, he teams up with a fellow Avenger and S.H.I.E.L.D agent,
+                   Black Widow, to battle a new threat from history:
+                   an assassin known as the Winter Soldier.
+                </p>
+                <p>
+                  <b>Directors</b>: Anthony Russo, Joe Russo <br>
+                  <b>Writers</b>: Christopher Markus, Stephen McFeely <br>
+                  <b>Stars</b>: Chris Evans, Samuel L. Jackson, Scarlett Johansson
+                </p>
+              </div> <!--description-->
+
+              <div class="btnGroup"> <!-- trailer and booking -->
+                <a class="btnToAccess" id="trailerBtn" href="#">Trailer</a>
+                <a class="btnToAccess" id="bookingBtn" href="#">Booking</a>
+              </div>
+
+            </div> <!--movie-content-->
+
+          </div>
+        </div>
+      </div> <!-- end container-->
+      <!--trailer Modal-->
+      <div class="modal" id="trailerModal" role="dialog">
         <div class="modal-content">
           <div class="modal-header">
             <div class="modalLable">
-              <h3 style="text-align: center;">BOOK YOUR SEAT</h3>
+              <h3 style="text-align: center;">TRAILER</h3>
             </div>
           </div>
           <div class="modal-body">
             <div class="container">
-
+              <div class="video">
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/NLWsK1ZFunA?controls=1" >
+                </iframe>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -204,10 +246,10 @@
 
 
       window.onclick = function(event) {
-        if ((event.target == signinModal)||(event.target == signupModal)||(event.target == seatbookingModal)){
+        if ((event.target == signinModal)||(event.target == signupModal)||(event.target == trailerModal)){
           signinModal.style.display = "none";
           signupModal.style.display = "none";
-          seatbookingModal.style.display = "none";
+          trailerModal.style.display = "none";
         }
       }
       //sign up
@@ -245,12 +287,13 @@
           e.preventDefault();
         });
       });
-      // seatbookingModal
-      var seatbookingBtn = document.getElementById("seatbooking-btn")
-      var seatbookingModal = document.getElementById("seatbooking-modal")
-      seatbookingBtn.onclick = function() {
-        seatbookingModal.style.display = "block";
+      // Trailer btn
+      var trailerButton = document.getElementById("trailerBtn");
+      var trailerModal = document.getElementById("trailerModal");
+      trailerButton.onclick = function() {
+        trailerModal.style.display = "block";
       }
+
 
       $(document).ready(function(){
           $(".dropdown-toggle").dropdown();

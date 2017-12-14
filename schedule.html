@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top" style="background-color: #384259;">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top">
         <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" class="logo"></a>
           <!-- Toggle icon when in mobile view -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,13 +152,14 @@
     </div>
 
     <main>
-      <div class="container inner">
+      <div class="container">
+        <div class="inner">
         <div class="general-block">
           <div class="arrow-right">
-            <div class="name-block">
+            <div class="block">
               <h3 class="block-title movie-icon">CHOOSE A MOVIE</h3>
-              <div class="block-content">
-                <div class="block-item checked">
+              <div id="movie" class="block-content">
+                <div id="item" class="block-item first">
                   CAPTAIN AMERICA
                 </div>
                 <div class="block-item">
@@ -187,13 +188,13 @@
           </div>
           <div class="block-wrap">
             <div class="arrow-bottom">
-              <div class="name-block">
+              <div class="block">
                 <h3 class="block-title theater-icon">CHOOSE A THEATER</h3>
-                <div class="block-content">
-                  <div class="block-item">
+                <div id="theater" class="block-content invisible" >
+                  <div id="list" class="block-item second">
                     HELSINKI
                   </div>
-                  <div class="block-item">
+                  <div  class="block-item">
                     TURKU
                   </div>
                   <div class="block-item">
@@ -209,9 +210,9 @@
               </div>
             </div>
 
-          <div class ="name-block movie-time">
+          <div class ="block movie-time">
             <h3 class="block-title time-icon">Choose time</h3>
-            <div  class="block-content">
+            <div id="time" class="block-content invisible">
               <div class="schedule">
                 <h3 class="schedule-title">Friday - 12.15.2017</h3>
                 <ul class="schedule-items">
@@ -233,11 +234,12 @@
         </div>
       </div>
     </div>
+    </div>
 
     </main>
 
     <footer>
-      <div class="row">
+      <div class="row no-padding">
         <div class="col-sm-3">
           <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" style="margin: 5px 25px 5px;"height="15px"></a>
         </div>
@@ -256,6 +258,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <!-- tweenmax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
     <script type="text/javascript">
       //sign in
       var signinButton = document.getElementById("sign-inButton");
@@ -307,6 +310,22 @@
           e.preventDefault();
         });
       });
+
+      $(document).ready(function(){
+        $("#item").click(function(event) {
+          $(".block-item.first").toggleClass("checked");
+          $("#theater.block-content").toggleClass("invisible");
+        });
+      });
+
+      $(document).ready(function(){
+        $("#list").click(function(event) {
+          $(".block-item.second").toggleClass("checked");
+          $("#time.block-content").toggleClass("invisible");
+        });
+      })
+    </script>
+
     </script>
   </body>
 </html>

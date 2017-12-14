@@ -1,21 +1,19 @@
-.inner{
-  max-width: 800px;
+.container>.inner{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 .general-block{
   overflow: hidden;
-  background: url('https://www.galaxycine.vn/asset/default/images/line-hor.png') repeat-x 0 100%;
   padding: 0 0 29px;
-}
-
-.general-block:last-child{
-  background: none
 }
 
 .block-wrap{
     overflow: hidden;
 }
 
-.name-block{
+.block{
   position:relative;
   background:#f8f8f8;
   -moz-box-shadow:1px 2px 5px rgba(0,0,0,0.8);
@@ -86,14 +84,19 @@
 
 .movie-time{
   /*margin: 0 4px 1rem 0;*/
-  float: right;
-  width: 400px;
+  marign-left:auto;
+  margin-right:auto;
   position: relative;
 }
 
 .block-content {
   padding:15px 30px;
   max-width: 500px;
+}
+
+.invisible{
+  opacity:0;
+  height:0;
 }
 
 .block-content>.block-item {
@@ -106,8 +109,6 @@
   font-size: 1.2rem;
   line-height: 1.1;
 }
-
-.block-content > .block-item .info {position: static;}
 
 .block-content>.block-item.checked {
   color:#3F7B70;
@@ -122,9 +123,11 @@
 }
 .schedule{
   max-height: 45px;
+  margin-bottom: 10px;
 }
 
 .schedule-title {
+  color:#113C4A;
   font-weight:700;
   font-size: 0.9em;
 }

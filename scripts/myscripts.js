@@ -1,26 +1,35 @@
-//sign in
-var signinButton = document.getElementById("sign-inButton");
-var signinModal = document.getElementById("sign-in");
-
-signinButton.onclick = function() {
-  signinModal.style.display = "block";
-}
-
-
-window.onclick = function(event) {
-  if ((event.target == signinModal)||(event.target == signupModal)||(event.target == trailerModal)){
-    signinModal.style.display = "none";
-    signupModal.style.display = "none";
-    trailerModal.style.display = "none";
+$(document).ready(function(){
+  console.log("b");
+  //sign in
+  var signinButton = document.getElementById("sign-inButton");
+  var signinModal = document.getElementById("sign-in");
+  signinButton.onclick = function() {
+    signinModal.style.display = "block";
   }
-}
-//sign up
-var signupButton = document.getElementById("sign-upButton");
-var signupModal = document.getElementById("sign-up");
-signupButton.onclick = function() {
-  signupModal.style.display = "block";
-  signinModal.style.display = "none";
-}
+  window.onclick = function(event) {
+    if ((event.target == signinModal)||(event.target == signupModal)||(event.target == trailerModal)){
+      signinModal.style.display = "none";
+      signupModal.style.display = "none";
+      trailerModal.style.display = "none";
+    }
+  }
+  //sign up
+  var signupButton = document.getElementById("sign-upButton");
+  var signupModal = document.getElementById("sign-up");
+  signupButton.onclick = function() {
+    signupModal.style.display = "block";
+    signinModal.style.display = "none";
+  }
+  // Trailer btn
+  var trailerButton = document.getElementById("trailerBtn");
+  var trailerModal = document.getElementById("trailerModal");
+  if (trailerButton != null) {
+    trailerButton.onclick = function() {
+      console.log("a");
+      trailerModal.style.display = "block";
+    }
+  }
+});
 //show password
 function showPass() {
     var x = document.getElementById("password");
@@ -49,13 +58,19 @@ $(document).ready(function(){
     e.preventDefault();
   });
 });
-// Trailer btn
-var trailerButton = document.getElementById("trailerBtn");
-var trailerModal = document.getElementById("trailerModal");
-trailerButton.onclick = function() {
-  trailerModal.style.display = "block";
+
+function changeTab(){
+  // Javascript to enable link to tab
+  var url = document.location.toString();
+  if (url.match('#')) {
+      $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+  }
 }
 
+$(document).ready(function () {
+  window.addEventListener("hashchange", changeTab);
+  changeTab();
+});
 
 $(document).ready(function(){
     $(".dropdown-toggle").dropdown();

@@ -5,20 +5,30 @@
     <title>NorthKino</title>
     <link rel="Shortcut Icon" href="logo/logo-icon.png" type="image/x-icon">
     <!--bootstrap-->
-
+    <!--JS jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>--->
     <!--CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google font -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Basic'>
     <!--self modified-->
-    <script type="text/javascript" href="scripts/myscripts.js"></script>
+    <script type="text/javascript" src="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
     <link rel="stylesheet" href="css/movie.css">
+    <script type="text/javascript">
+      // Javascript to enable link to tab
+      var url = document.location.toString();
+      if (url.match('#')) {
+      $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+      }
 
+    </script>
   </head>
   <body>
     <header>
@@ -322,71 +332,5 @@
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- tweenmax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-    <script type="text/javascript">
-      //sign in
-      var signinButton = document.getElementById("sign-inButton");
-      var signinModal = document.getElementById("sign-in");
-
-      signinButton.onclick = function() {
-        signinModal.style.display = "block";
-      }
-
-
-      window.onclick = function(event) {
-        if ((event.target == signinModal)||(event.target == signupModal)){
-          signinModal.style.display = "none";
-          signupModal.style.display = "none";
-        }
-      }
-      //sign up
-      var signupButton = document.getElementById("sign-upButton");
-      var signupModal = document.getElementById("sign-up");
-      signupButton.onclick = function() {
-        signupModal.style.display = "block";
-        signinModal.style.display = "none";
-      }
-      //show password
-      function showPass() {
-          var x = document.getElementById("password");
-          if (x.type === "password") {
-              x.type = "text";
-          } else {
-              x.type = "password";
-          }
-      }
-      //form
-      $(document).ready(function(){
-          $(".inputfield").focus(function(){
-              $(".inputLabel").fadeTo(1000,1).fadeIn(500).css("display", "block");
-          });
-      });
-
-      $(document).ready(function(){
-        $('.nav-tabs a[href="#on-showing"]').tab('show')
-          });
-      //show and hide tabSlideshow
-      /*$(document).ready(function(){
-        $(".nav-tabs a").on("click", function(e){
-          var currentTab = $(this).attr("href");
-          //show and hide tabs
-          $('.tab-pane'+currentTab).show(600).siblings().hide(600);
-          //add active class
-          $(this).parent('li').addClass("active").siblings().removeClass("active");
-          //Prevent Default Anchor Link Behaviour
-          e.preventDefault();
-        });
-      });*/
-
-      $(document).ready(function(){
-          $(".dropdown-toggle").dropdown();
-      });
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
   </body>
 </html>

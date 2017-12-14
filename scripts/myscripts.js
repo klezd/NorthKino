@@ -1,9 +1,3 @@
-$(document).ready(function(){
-    $(".dropdown-toggle").dropdown();
-});
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
 //sign in
 var signinButton = document.getElementById("sign-inButton");
 var signinModal = document.getElementById("sign-in");
@@ -14,9 +8,10 @@ signinButton.onclick = function() {
 
 
 window.onclick = function(event) {
-  if ((event.target == signinModal)||(event.target == signupModal)){
+  if ((event.target == signinModal)||(event.target == signupModal)||(event.target == trailerModal)){
     signinModal.style.display = "none";
     signupModal.style.display = "none";
+    trailerModal.style.display = "none";
   }
 }
 //sign up
@@ -53,4 +48,18 @@ $(document).ready(function(){
     //Prevent Default Anchor Link Behaviour
     e.preventDefault();
   });
+});
+// Trailer btn
+var trailerButton = document.getElementById("trailerBtn");
+var trailerModal = document.getElementById("trailerModal");
+trailerButton.onclick = function() {
+  trailerModal.style.display = "block";
+}
+
+
+$(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+});
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
 });

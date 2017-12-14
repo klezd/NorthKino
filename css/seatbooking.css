@@ -1,6 +1,20 @@
-.btnToChooseSeat {
+.btnToAccess{
   display: block;
   color: white;
-
+  width: 200px;
+  word-wrap: break-word;
+  padding: 10px;
+  border: 1px rgb(182,0,0) solid;
+  border-radius: 3px;
+  background: rgb(182,0,0);
+  background: rgba(182,0,0, 0.8);
+  margin: 10px 20px 10px;
+  box-shadow: 1px 1px 1px #212121;
+  display: inline-block;
+  text-align: center;
+}
+a.btnToAccess:hover {
+  font-weight: bold;
+  color: white
 }
 /* modal */

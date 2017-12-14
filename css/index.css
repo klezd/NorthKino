@@ -153,7 +153,8 @@ imgae slideshow*/
   opacity: 0;
   position: absolute;
   top: 0;
-  background:#FAFAFA;
+  background:rgb(192,192,192);
+  background: rgba(192,192,192,0.6);
   padding: 150px 10px;
   -moz-transition: all ease-out 500ms;
   transition: all ease-out 500ms;
@@ -165,7 +166,7 @@ a.showMore {
   border: 1px solid;
   border-radius: 3px;
   filter: alpha(opacity=60);
-  background-color:#ffffff;
+  background-color:rgb(192,192,192);
   margin: auto;
   opacity: 1!important;
   color: black;
@@ -188,7 +189,7 @@ a.showMore {
 }
 
 .img-container:hover .img-button {
-  opacity: 0.7;
+  opacity: 1;
 }
 .img-container:hover a.showMore {
   transform: rotateY(0px);

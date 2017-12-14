@@ -76,7 +76,7 @@ nav a:hover {
 nav li.active {
   background-color: #b30000;
 }
-nav li.active a {
+nav li.active a:not(.dropdown-item) {
   color: white !important;
   font-weight: bold;
 }

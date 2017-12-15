@@ -58,9 +58,8 @@ $(document).ready(function(){
     e.preventDefault();
   });
 });
-
+// Javascript to enable link to tab
 function changeTab(){
-  // Javascript to enable link to tab
   var url = document.location.toString();
   if (url.match('#')) {
       $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
@@ -71,6 +70,20 @@ $(document).ready(function () {
   window.addEventListener("hashchange", changeTab);
   changeTab();
 });
+// script works for casourel movies tabs
+$(document).ready(function() {
+  $('#media').carousel({
+      pause: true,
+      interval: false,
+    })
+});
+$(document).ready(function() {
+  $('#media2').carousel({
+      pause: true,
+      interval: false,
+    })
+});
+
 
 $(document).ready(function(){
     $(".dropdown-toggle").dropdown();

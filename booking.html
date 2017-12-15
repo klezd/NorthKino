@@ -13,12 +13,12 @@
     <!--self modified-->
     <script type="text/javascript" href="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
-    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/booking.css">
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top" style="background-color: #384259;">
-        <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" class="logo"></a>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top">
+        <a href="index.html" title="Home"><img src="logo/logo.png" alt="NorthKino" class="logo"></a>
           <!-- Toggle icon when in mobile view -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -152,8 +152,37 @@
     </div>
 
     <main>
-      <div class="container inner">
-
+      <div class="container">
+        <h3>
+          Confirm your booking
+          <span></span>
+          <i class="fa fa-spinner" aria-hidden="true"></i>
+        </h3>
+        <div class="confirm-box">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="film/Captain-America.jpg" alt="captain America">
+            </div>
+            <div class="col-md-8">
+             <div class="movie-detail">
+               <h5><i class="fa fa-ticket" aria-hidden="true"></i>
+                 <span></span>
+                 CAPTIAN AMERICA
+               </h5>
+               <h5><i class="fa fa-map-marker" aria-hidden="true"></i>
+                 <span></span>
+                 Helsinki Theater
+              </h5>
+              <h5><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                Box 1
+              </h5>
+             </div>
+             <div class="process">
+               <a class="btn btn-danger" href="schedule.html">Back</a>
+               <a class="btn btn-success" href="#">Proceed to payment</a>
+            </div>
+          </div>
+        </div>
       </div>
 
     </main>

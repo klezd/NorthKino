@@ -5,20 +5,27 @@
     <title>NorthKino - Schedule</title>
     <link rel="Shortcut Icon" href="logo/logo-icon.png" type="image/x-icon">
     <!--bootstrap-->
+    <!--JS jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>--->
     <!--CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--self modified-->
-    <script type="text/javascript" href="scripts/myscripts.js"></script>
+    <script type="text/javascript" src="scripts/myscripts.js"></script>
     <link rel="stylesheet" href="css/navigatorbar.css">
     <link rel="stylesheet" href="css/booking.css">
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-top">
-        <a href="index.html" title="Home"><img src="logo/logo.png" alt="NorthKino" class="logo"></a>
+        <a href="index.html" title="Home"><img src="logo/northkino.png" alt="NorthKino" class="logo"></a>
           <!-- Toggle icon when in mobile view -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -202,62 +209,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <!-- tweenmax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-    <script type="text/javascript">
-      //sign in
-      var signinButton = document.getElementById("sign-inButton");
-      var signinModal = document.getElementById("sign-in");
 
-      signinButton.onclick = function() {
-        signinModal.style.display = "block";
-      }
-
-
-      window.onclick = function(event) {
-        if ((event.target == signinModal)||(event.target == signupModal)){
-          signinModal.style.display = "none";
-          signupModal.style.display = "none";
-        }
-      }
-      //sign up
-      var signupButton = document.getElementById("sign-upButton");
-      var signupModal = document.getElementById("sign-up");
-      signupButton.onclick = function() {
-        signupModal.style.display = "block";
-        signinModal.style.display = "none";
-      }
-      //show password
-      function showPass() {
-          var x = document.getElementById("password");
-          if (x.type === "password") {
-              x.type = "text";
-          } else {
-              x.type = "password";
-          }
-      }
-      //form
-      $(document).ready(function(){
-          $(".inputfield").focus(function(){
-              $(".inputLabel").fadeTo(1000,1).fadeIn(500).css("display", "block");
-          });
-      });
-
-      //show and hide tabSlideshow
-      $(document).ready(function(){
-        $(".tab-links a").on("click", function(e){
-          var currentTab = $(this).attr("href");
-          //show and hide tabs
-          $('.tab'+currentTab).show(600).siblings().hide(600);
-          //add active class
-          $(this).parent('li').addClass("active").siblings().removeClass("active");
-          //Prevent Default Anchor Link Behaviour
-          e.preventDefault();
-        });
-      });
-    </script>
   </body>
 </html>

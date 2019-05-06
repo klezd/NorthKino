@@ -45,6 +45,18 @@ $(document).ready(function(){
         $(".inputLabel").fadeTo(1000,1).fadeIn(500).css("display", "block");
     });
 });
+//test SG
+$(document).ready(function(){
+  $(".tab-links a").on("focus", function(e){
+    var currentTab = $(this).attr("href");
+    //show and hide tabs
+    $('.tab'+currentTab).show(600).siblings().hide(600);
+    //add active class
+    $(this).parent('li').addClass("active").siblings().removeClass("active");
+    //Prevent Default Anchor Link Behaviour
+    e.preventDefault();
+  });
+});
 
 //show and hide tabSlideshow
 $(document).ready(function(){
